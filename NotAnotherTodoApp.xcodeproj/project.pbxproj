@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		F368867029E74E28008B9C61 /* UIKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F368866F29E74E28008B9C61 /* UIKitViewController.swift */; };
 		F368867329E75219008B9C61 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F368867229E75219008B9C61 /* SnapKit */; };
+		F368867529E99254008B9C61 /* TodoItemTableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F368867429E99254008B9C61 /* TodoItemTableTableViewCell.swift */; };
 		F3E39A0429E74BAF0023A98B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E39A0329E74BAF0023A98B /* AppDelegate.swift */; };
 		F3E39A0629E74BAF0023A98B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E39A0529E74BAF0023A98B /* SceneDelegate.swift */; };
 		F3E39A0829E74BAF0023A98B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E39A0729E74BAF0023A98B /* ViewController.swift */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		F368866F29E74E28008B9C61 /* UIKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitViewController.swift; sourceTree = "<group>"; };
+		F368867429E99254008B9C61 /* TodoItemTableTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItemTableTableViewCell.swift; sourceTree = "<group>"; };
 		F3E39A0029E74BAF0023A98B /* NotAnotherTodoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotAnotherTodoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3E39A0329E74BAF0023A98B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3E39A0529E74BAF0023A98B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				F3E39A0E29E74BB10023A98B /* LaunchScreen.storyboard */,
 				F3E39A1129E74BB10023A98B /* Info.plist */,
 				F368866F29E74E28008B9C61 /* UIKitViewController.swift */,
+				F368867429E99254008B9C61 /* TodoItemTableTableViewCell.swift */,
 			);
 			path = NotAnotherTodoApp;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 			files = (
 				F3E39A0829E74BAF0023A98B /* ViewController.swift in Sources */,
 				F368867029E74E28008B9C61 /* UIKitViewController.swift in Sources */,
+				F368867529E99254008B9C61 /* TodoItemTableTableViewCell.swift in Sources */,
 				F3E39A0429E74BAF0023A98B /* AppDelegate.swift in Sources */,
 				F3E39A0629E74BAF0023A98B /* SceneDelegate.swift in Sources */,
 			);

@@ -15,12 +15,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        // temp: just go direct to UIKit vc
+        let vc = UIKitViewController()
+        navigationController?.pushViewController(vc, animated: true)
     }
 
     @IBAction func openUIKitScreen(_ sender: Any) {
-        let vc = UIKitViewController()
-        vc.modalPresentationStyle = .fullScreen
-        present(vc, animated: true)
+//        let vc = UIKitViewController()
+//        navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func openSwiftUIScreen(_ sender: Any) {
