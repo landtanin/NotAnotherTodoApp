@@ -12,8 +12,8 @@ class TodoItemTableTableViewCell: UITableViewCell {
     
     static let identifier: String = "todo_item_cell_identifier"
     
-    var checkmarkButton: UIButton!
-    var descriptionLabel: UILabel!
+    private var checkmarkButton: UIButton!
+    private var descriptionLabel: UILabel!
     
     func configure(_ description: String) {
         descriptionLabel.attributedText = nil
@@ -22,6 +22,7 @@ class TodoItemTableTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        backgroundColor = .systemBackground
         
         checkmarkButton = UIButton(type: .system)
         checkmarkButton.setImage(UIImage(named: "icon-empty"), for: .normal)
@@ -35,7 +36,7 @@ class TodoItemTableTableViewCell: UITableViewCell {
         }
 
         descriptionLabel = UILabel()
-        descriptionLabel.text = "Bla bla"
+//        descriptionLabel.font = .preferredFont(forTextStyle: .body)
         contentView.addSubview(descriptionLabel)
         
         descriptionLabel.snp.makeConstraints { make in
