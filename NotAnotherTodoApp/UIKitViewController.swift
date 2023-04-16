@@ -22,7 +22,7 @@ class UIKitViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(scrollView)
-        view.backgroundColor = .white
+        view.backgroundColor = .systemBackground
         
         scrollView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
@@ -37,9 +37,10 @@ class UIKitViewController: UIViewController {
         todoItemTableView.snp.makeConstraints { make in
             make.width.equalToSuperview().inset(10)
         }
+        let buttonHeight = 44
         
         addTaskButton.snp.makeConstraints { make in
-            make.height.greaterThanOrEqualTo(44)
+            make.height.greaterThanOrEqualTo(buttonHeight)
             make.width.equalToSuperview().inset(10)
         }
     }
@@ -90,6 +91,7 @@ class UIKitViewController: UIViewController {
         button.setTitle("⨁ New task", for: .normal)
         button.layer.backgroundColor = UIColor.systemRed.cgColor
         button.layer.cornerRadius = 44 / 2
+        button.titleLabel?.font = .preferredFont(forTextStyle: .body)
         button.titleLabel?.adjustsFontForContentSizeCategory = true
         button.addTarget(self, action: #selector(addNewTask(_:)), for: .touchUpInside)
         return button

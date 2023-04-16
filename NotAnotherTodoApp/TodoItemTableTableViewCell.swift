@@ -36,11 +36,13 @@ class TodoItemTableTableViewCell: UITableViewCell {
         }
 
         descriptionLabel = UILabel()
-//        descriptionLabel.font = .preferredFont(forTextStyle: .body)
+        descriptionLabel.font = .preferredFont(forTextStyle: .body)
+        descriptionLabel.numberOfLines = 0
         contentView.addSubview(descriptionLabel)
         
         descriptionLabel.snp.makeConstraints { make in
             make.leading.equalTo(checkmarkButton.snp.trailing).offset(10)
+            make.top.trailing.bottom.equalToSuperview().inset(16)
             make.centerY.equalToSuperview()
         }
     }
