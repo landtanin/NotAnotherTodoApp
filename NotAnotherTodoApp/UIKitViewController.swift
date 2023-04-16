@@ -22,7 +22,7 @@ class UIKitViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(scrollView)
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = .white
         
         scrollView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
@@ -87,11 +87,9 @@ class UIKitViewController: UIViewController {
     
     private lazy var addTaskButton: UIButton = {
         let button = UIButton()
-//        button.accessibilityHint = ""
         button.setTitle("⨁ New task", for: .normal)
         button.layer.backgroundColor = UIColor.systemRed.cgColor
         button.layer.cornerRadius = 44 / 2
-        button.titleLabel?.font = .preferredFont(forTextStyle: .body)
         button.titleLabel?.adjustsFontForContentSizeCategory = true
         button.addTarget(self, action: #selector(addNewTask(_:)), for: .touchUpInside)
         return button

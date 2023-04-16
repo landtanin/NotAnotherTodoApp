@@ -39,7 +39,7 @@ class NewItemTableViewCell: UITableViewCell {
         
         // Text field error label
         errorLabel.translatesAutoresizingMaskIntoConstraints = false
-        errorLabel.textColor = .red
+        errorLabel.textColor = .systemRed
         errorLabel.isHidden = true
         
         // Add constraints
