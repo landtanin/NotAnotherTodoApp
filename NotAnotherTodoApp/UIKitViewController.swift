@@ -12,7 +12,11 @@ class UIKitViewController: UIViewController {
 
     var isAddingItem = false
     private var todoItems: [String] = [
-        "Use Accessibility Inspector"
+        "Use Accessibility Inspector",
+        "Use Environment Overrider",
+        "Demonstarte a11y curtain",
+        "Demonstarte speaking rate adjusting",
+        "Using Voice Control"
     ]
     
     override func viewDidLoad() {
