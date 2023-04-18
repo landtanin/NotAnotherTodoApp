@@ -61,13 +61,16 @@ class TodoItemTableTableViewCell: UITableViewCell {
         }
         
         let attributeString =  NSMutableAttributedString(string: text)
+        attributeString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 2, range: NSRange(text.startIndex..., in: text))
+        
+        
+        
         
         // checkmarkButton.isAccessibilityElement = false
         
-        if strikeThrough {
+//        if strikeThrough {
 //            descriptionLabel.accessibilityLabel = "Completed: \(text)"
-            attributeString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 2, range: NSRange(text.startIndex..., in: text))
-        }
+//        }
 //        else {
 //            descriptionLabel.accessibilityLabel = "Uncompleted: \(text)"
 //        }
