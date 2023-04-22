@@ -25,8 +25,10 @@ class TodoItemTableTableViewCell: UITableViewCell {
         backgroundColor = .systemBackground
         
         checkmarkButton = UIButton(type: .system)
+        checkmarkButton.isAccessibilityElement = false
         checkmarkButton.setImage(UIImage(named: "icon-empty"), for: .normal)
-        checkmarkButton.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(buttonTapped))
+        contentView.addGestureRecognizer(tapGesture)
         contentView.addSubview(checkmarkButton)
         
         checkmarkButton.snp.makeConstraints { make in
@@ -51,7 +53,7 @@ class TodoItemTableTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    @objc func buttonTapped(sender: UIButton) {
+    @objc func buttonTapped() {
         shouldStrikeThroughText(!checkmarkButton.isSelected)
     }
     
@@ -62,18 +64,7 @@ class TodoItemTableTableViewCell: UITableViewCell {
         
         let attributeString =  NSMutableAttributedString(string: text)
         attributeString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 2, range: NSRange(text.startIndex..., in: text))
-        
-        
-        
-        
-        // checkmarkButton.isAccessibilityElement = false
-        
-//        if strikeThrough {
-//            descriptionLabel.accessibilityLabel = "Completed: \(text)"
-//        }
-//        else {
-//            descriptionLabel.accessibilityLabel = "Uncompleted: \(text)"
-//        }
+        descriptionLabel.accessibilityLabel = "Completed: \(text)"
         
         let buttonImage = strikeThrough ? UIImage(named: "icon-check") : UIImage(named: "icon-empty")
         checkmarkButton.setImage(buttonImage, for: .normal)
