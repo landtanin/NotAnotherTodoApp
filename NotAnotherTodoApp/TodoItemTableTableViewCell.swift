@@ -62,9 +62,16 @@ class TodoItemTableTableViewCell: UITableViewCell {
             return
         }
         
-        let attributeString =  NSMutableAttributedString(string: text)
-        attributeString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 2, range: NSRange(text.startIndex..., in: text))
-        descriptionLabel.accessibilityLabel = "Completed: \(text)"
+        // instantiate `attributeString` here
+        let attributeString: NSMutableAttributedString
+        if strikeThrough {
+            attributeString =  NSMutableAttributedString(string: text)
+            attributeString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 2, range: NSRange(text.startIndex..., in: text))
+            descriptionLabel.accessibilityLabel = "Completed: \(text)"    
+        } else {
+            attributeString = NSMutableAttributedString(string: text)
+            descriptionLabel.accessibilityLabel = text
+        }
         
         let buttonImage = strikeThrough ? UIImage(named: "icon-check") : UIImage(named: "icon-empty")
         checkmarkButton.setImage(buttonImage, for: .normal)
